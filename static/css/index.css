@@ -278,8 +278,8 @@ a:hover:after{
   background:#f9ecec;
 }
 .marquee-item2{
-  width: 450px;
-  height: 180px;
+  width: 600px;
+  height: 210px;
   display: inline-block;
   margin: 0 10px;
   float: left;
