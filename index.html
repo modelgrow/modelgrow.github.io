@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ModelGrow: Continual Text-to-Video Pre-training with Model Expansion and Language Understanding Enhancement</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="xtitle is-1 publication-title"><strong>ModelGrow</strong>: Continual Text-to-Video Pre-training with Model Expansion and Language Understanding Enhancement</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=8yjKlAEAAAAJ&hl=en" target="_blank">Zhefan Rao</a><sup>1</sup><sup>*</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Liya Ji</a><sup>1</sup><sup>*</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yazhou Xing</a><sup>1</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Runtao Liu</a><sup>1</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zhaoyang Liu</a><sup>1</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiaxin Xie</a><sup>1</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Ziqiao Peng</a><sup>2</sup></span>
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yingqing He</a><sup>1</sup><sup>†</sup></span>
+              <span class="author-block">
+                <a href="https://cqf.io" target="_blank">Qifeng Chen</a><sup>1</sup><sup>†</sup>
+              </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Hong Kong University of Science and Technology<sup>1</sup></span>
+                <span class="author-block">Renmin University of China<sup>2</sup></span>
+
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Joint First Authors</small></span>
+                <span class="eql-cntrb"><small><br><sup>†</sup>Indicates Joint Corresponding Authors</small></span>
+              </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="LINK" target="_blank"
+                        class="external-link ">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link ">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link ">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero">
+  <div class="is-max-desktop">
+    <div class="marquee-wrapper">
+      <div class="container">
+        <div class="marquee-block">
+          <div class="marquee-inner to-left">
+            <span>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v1.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video2" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v2.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video3" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v3.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video4" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v4.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video5" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v5.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+            </span>
+            <span>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v1.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video2" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v2.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video3" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v3.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video4" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v4.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+              <div class="marquee-item">
+                <video onloadstart="this.playbackRate = 0.9;" poster="" id="video5" autoplay muted loop playsinline height="100%">
+                  <source src="static/videos/video1/v5.mp4"
+                  type="video/mp4">
+                sorry, your browser does not support HTML5 Videos.
+                </video>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-video (T2V) generation has gained significant attention recently. However, the costs of training a T2V model from scratch remain persistently high, and there is considerable room for improving the generation performance, especially under limited computation resources. This work explores the continual general pre-training of text-to-video models, enabling the model to ``grow" its abilities based on a pre-trained foundation, analogous to how humans acquire new knowledge based on past experiences. There is a lack of extensive study of the continual pre-training techniques in T2V generation. In this work, we take the initial step toward exploring this task systematically and propose <i>ModelGrow</i>.
+            Specifically, we break this task into two key aspects: increasing model capacity and improving semantic understanding. 
+            For model capacity, we introduce several novel techniques to expand the model size, enabling it to store new knowledge and improve generation performance. 
+            For semantic understanding, we propose a method that leverages large language models as advanced text encoders, integrating them into T2V models to enhance language comprehension and guide generation results according to detailed prompts. 
+            This approach enables the model to achieve better semantic alignment, particularly in response to complex user prompts.
+            Extensive experiments demonstrate the effectiveness of our method across various metrics. The source code and the model of <i>ModelGrow</i> will be publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/f1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left">
+          Overview of the pipeline cooperating with the LLMs enhancement. We modify the architecture of the transformer block by
+          adding another cross-attention block, aiming to learn the condition of LLM text embedding. The LLMs cross-attention block follows the
+          original T5 cross-attention block to enhance the language understanding ability of the generation models. For better understanding, we
+          omit the details of the temporal block and spatial block, which are the same as the DiT transformer block. All parameters of the
+          transformer block will be updated during the training process.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/f2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left">
+          Simplified forward pipeline and variants of block expansion methods. (a) The vanilla pipeline is the traditional stacking of
+          transformer blocks for sequential processing; (b) insert stacking is inserting new transformer blocks intermittently between the existing
+          stack; (c) prefix stacking is adding all the new transformer blocks at the beginning of the stack; (d) suffix stacking is appending all the new
+          transformer blocks at the end of the stack. Each stacking variant illustrates different strategies for arranging transformer blocks to enhance
+          model performance. We choose Insert Stacking as our expansion method.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/f3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-left">
+          Example of training prompts recaption.
+          Under the help of LLaVA-NEXT,
+          we utilize the instruction to generate a desirable detailed
+          prompt. Compared to the original prompts, it presents the
+          key elements like the setting, characters, and their actions.
+       </h2>
+     </div>
+     <!-- <div class="item"> -->
+      <!-- Your image here -->
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2> -->
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <!-- <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <!-- </div> -->
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="./static/videos/ModelGrow.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Main Result Comparisons</h2>
+      <div class="marquee-item2">
+        <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1"  class="lozad" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/video2/v1.mp4"
+            type="video/mp4">
+          sorry, your browser does not support HTML5 Videos.
+          </video>
+        <p class="text-white"> <font size="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Base Model &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LoRA-0.7B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expansion-1.4B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExpansion-LLM-1.4B </font></p>
+        <p class="text-white"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Black swan gliding past a green lily pad. </p>
+      </div>
+      <div class="marquee-item2">
+        <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1"  class="lozad" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/video2/v2.mp4"
+            type="video/mp4">
+          sorry, your browser does not support HTML5 Videos.
+          </video>
+        <p class="text-white"> <font size="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Base Model &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LoRA-0.7B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expansion-1.4B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExpansion-LLM-1.4B </font></p>
+        <p class="text-white"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Girl with curly hair riding a red bike. </p>
+      </div>
+      <div class="marquee-item2">
+        <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1"  class="lozad" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/video2/v3.mp4"
+            type="video/mp4">
+          sorry, your browser does not support HTML5 Videos.
+          </video>
+        <p class="text-white"> <font size="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Base Model &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LoRA-0.7B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expansion-1.4B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExpansion-LLM-1.4B </font></p>
+        <p class="text-white"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp A cat wearing sunglasses at a pool. </p>
+      </div>
+      <div class="marquee-item2">
+        <video onloadstart="this.playbackRate = 0.9;" poster="" id="video1"  class="lozad" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/video2/v4.mp4"
+            type="video/mp4">
+          sorry, your browser does not support HTML5 Videos.
+          </video>
+        <p class="text-white"> <font size="1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Base Model &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp LoRA-0.7B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expansion-1.4B &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExpansion-LLM-1.4B </font></p>
+        <p class="text-white"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Pyramidal tent sheltering a round grill. </p>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<!-- Paper poster  -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!-- End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{ji2023neural,
+        author       = {Liya Ji and
+                        Chan Ho Park and
+                        Zhefan Rao and
+                        Qifeng Chen},
+        title        = {Neural Image Popularity Assessment with Retrieval-augmented Transformer},
+        booktitle    = {ACM Multimedia},
+        year         = {2023},
+      }</code></pre>
+    </div>
+</section> -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code> Coming Soon ...
+    </code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
